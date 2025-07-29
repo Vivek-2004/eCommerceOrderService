@@ -31,7 +31,7 @@ public class OrderService implements IOrderService {
 
         List<OrderItem> items = new ArrayList<>();
 
-        for(OrderItemDTO item: request.getItems()) {
+        for (OrderItemDTO item : request.getItems()) {
             // Fetch the product details for each item.
             ProductDTO product = productServiceClient.getProductById(item.getProductId());
             double pricePerUnit = product.getPrice();
